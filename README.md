@@ -1,2 +1,81 @@
-# Bayesian-Sales-Forecasting-for-Coca-Cola
-Bayesian regression analysis for forecasting Coca-Cola outlet sales in Dekina, Nigeria, using PyMC and MCMC
+## Bayesian Regression Analysis for Forecasting Coca-Cola Outlet Sales in Dekina, Nigeria
+
+### Project Overview
+
+Accurate sales forecasting is a critical challenge for companies in the fast-moving consumer goods (FMCG) sector. For Coca-Cola outlets in Dekina, Kogi State, Nigeria, demand fluctuates due to seasonality, promotional activities, and holidays, making traditional forecasting methods unreliable. Poor forecasting often results in inventory shortages, wastage, and missed revenue opportunities.
+
+This project applies Bayesian regression analysis to develop a robust, data-driven model for forecasting Coca-Cola sales. Unlike frequentist regression methods, the Bayesian approach integrates prior knowledge, handles uncertainty, and produces probabilistic forecasts—providing not only expected values but also credible intervals that quantify uncertainty.
+
+### Data Sources
+
+The dataset consists of **36 months of sales records** from Coca-Cola outlets in Dekina, Kogi State, Nigeria. It includes the number of crates sold per month along with indicators for **promotions**, **holidays**, and **seasonal cycles** (rainy/dry season). Additional context on holidays and seasonality was obtained from local calendars.
+
+### Tools
+
+- Excel - Data Collection [Download here](https://microsoft.com)
+- Python – Main programming language for data analysis and model building [Download here](https://www.python.org/downloads/)
+- Pandas – Data cleaning, manipulation, and preparation of the sales dataset
+- NumPy – Numerical computations and array handling
+- Matplotlib & Seaborn – Visualization of sales trends, seasonality, and model outputs
+- PyMC – Implementation of the Bayesian regression model and probabilistic forecasting
+- ArviZ – Diagnostic checks, posterior analysis, and visualization of Bayesian model results
+- Scikit-learn – Standardization and preprocessing of input features
+
+### Data Cleaning/Preprocessing 
+
+Steps Performed:
+1. Load Dataset: Import the sales data from Excel and inspect for consistency.
+2. Convert Date Column: Transform the date column into datetime format.
+3. Extract Month: Derive the month from the date to capture temporal trends.
+4. Encode Cyclical Features: Use sine and cosine transformations to encode month cyclicality.
+5. Create Seasonal Indicator: Generate a binary variable to mark peak sales months (April–August).
+6. Select Features: Identify predictors relevant for modeling: promotion_done, holidays, season, sin_month, cos_month.
+7. Split Data: Separate data into training and test sets, reserving the last 3 months for testing.
+8. Scale Predictors: Standardize features for numerical stability in modeling.
+
+#### Implementation in Python
+
+The following Python code demonstrates the data cleaning and preprocessing steps stated above:
+
+```python
+# importing all the necessary libraries for data preprocessing, analysis and visualization
+import pymc as pm                         #for Probabilistic programming for Bayesian modeling
+import pandas as pd                      # for Data manipulation and analysis
+import numpy as np                       # for Numerical operations and array handling
+import matplotlib.pyplot as plt          # for Visualization and plotting
+import arviz as az                       # for Diagnostics and visualization of Bayesian inference
+from sklearn.preprocessing import StandardScaler  # Feature standardization
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score  # Model evaluation metrics
+import seaborn as sns
+# Load dataset
+df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
+
+# Convert date column and extract month
+df['date'] = pd.to_datetime(df['date'])
+df['month'] = df['date'].dt.month
+
+# Encode cyclical features
+df['sin_month'] = np.sin(2 * np.pi * df['month'] / 12)
+df['cos_month'] = np.cos(2 * np.pi * df['month'] / 12)
+
+# Create seasonal indicator for peak months (April-August)
+df['season'] = df['month'].isin([4,5,6,7,8]).astype(int)
+
+# Select features and target variable
+features = ['promotion_done', 'holidays', 'season', 'sin_month', 'cos_month']
+X = df[features]
+y = df['sales_in_crates']
+
+# Split into training and test sets
+train_df = df.iloc[:-3]
+test_df = df.iloc[-3:]
+X_train = train_df[features]
+X_test = test_df[features]
+y_train = train_df['sales_in_crates']
+y_test = test_df['sales_in_crates']
+
+# Scale predictor variables
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+```
