@@ -50,7 +50,7 @@ import seaborn as sns
 # Load dataset
 df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 ```
-Find the complete [data cleaning and preprocessing code here](/data_cleaning_and_preprocessing.ipynb).
+Find the complete [data cleaning and preprocessing code here](/scripts/data_cleaning_and_preprocessing.ipynb).
 
 ### Data Analysis
 #### Exploratory Data Analysis (EDA)
