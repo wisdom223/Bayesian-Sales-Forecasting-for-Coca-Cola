@@ -54,7 +54,7 @@ Find the complete [data cleaning and preprocessing code here](/scripts/data_clea
 
 ### Data Analysis
 #### Exploratory Data Analysis (EDA)
-Objective: Get to know the data, and check how promotions/holidays relate to sales 
+**Objective:** Get to know the data, and check how promotions/holidays relate to sales 
 
 ##### Key Steps Performed:
 - Inspect summary statistics and first rows.
@@ -67,4 +67,12 @@ Objective: Get to know the data, and check how promotions/holidays relate to sal
   display(df.head())
   print(df[["sales_in_crates", "promotion_done", "holidays", "season"]].describe())
   ```
-  Find complete [exploratory data analysis code here](/scripts/EDA.ipynb) 
+  ##### Key Insights From Visuals:
+  *1. Sales Trend Over Time*
+
+  
+
+     
+  Find complete [exploratory data analysis code here](/scripts/EDA.ipynb)
+
+  
