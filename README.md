@@ -1,16 +1,16 @@
 ## Bayesian Regression Analysis for Forecasting Coca-Cola Outlet Sales in Dekina, Nigeria
 
-### Project Overview
+## Project Overview
 
 Accurate sales forecasting is a critical challenge for companies in the fast-moving consumer goods (FMCG) sector. For Coca-Cola outlets in Dekina, Kogi State, Nigeria, demand fluctuates due to seasonality, promotional activities, and holidays, making traditional forecasting methods unreliable. Poor forecasting often results in inventory shortages, wastage, and missed revenue opportunities.
 
 This project applies Bayesian regression analysis to develop a robust, data-driven model for forecasting Coca-Cola sales. Unlike frequentist regression methods, the Bayesian approach integrates prior knowledge, handles uncertainty, and produces probabilistic forecasts—providing not only expected values but also credible intervals that quantify uncertainty.
 
-### Data Sources
+## Data Sources
 
 The dataset consists of **36 months of sales records** from Coca-Cola outlets in Dekina, Kogi State, Nigeria. It includes the number of crates sold per month along with indicators for **promotions**, **holidays**, and **seasonal cycles** (rainy/dry season). Additional context on holidays and seasonality was obtained from local calendars.
 
-### Tools
+## Tools
 
 - Excel - Data Collection [Download here](https://microsoft.com)
 - Python – Main programming language for data analysis and model building [Download here](https://www.python.org/downloads/)
@@ -21,9 +21,9 @@ The dataset consists of **36 months of sales records** from Coca-Cola outlets in
 - ArviZ – Diagnostic checks, posterior analysis, and visualization of Bayesian model results
 - Scikit-learn – Standardization and preprocessing of input features
 
-### Data Cleaning/Preprocessing 
+## Data Cleaning/Preprocessing 
 
-Steps Performed:
+***Steps Performed:***
 1. Load Dataset: Import the sales data from Excel and inspect for consistency.
 2. Convert Date Column: Transform the date column into datetime format.
 3. Extract Month: Derive the month from the date to capture temporal trends.
@@ -33,7 +33,7 @@ Steps Performed:
 7. Split Data: Separate data into training and test sets, reserving the last 3 months for testing.
 8. Scale Predictors: Standardize features for numerical stability in modeling.
 
-#### Implementation in Python
+### Implementation in Python
 
 The following Python code snipet demonstrates the data cleaning and preprocessing steps stated above:
 
@@ -52,7 +52,7 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 ```
 ***Find the complete [data cleaning and preprocessing code here](/scripts/data_cleaning_and_preprocessing.ipynb)***
 
-### Data Analysis
+## Data Analysis
 ### Exploratory Data Analysis (EDA)
 ***Objective:*** Get to know the data, and check how promotions/holidays relate to sales 
 
