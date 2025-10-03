@@ -54,7 +54,7 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 
 ### Data Analysis
 ### Exploratory Data Analysis (EDA)
-**Objective:** Get to know the data, and check how promotions/holidays relate to sales 
+***Objective:*** Get to know the data, and check how promotions/holidays relate to sales 
 
 #### Key Steps Performed:
 - Inspect summary statistics and first rows.
@@ -68,9 +68,9 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
   print(df[["sales_in_crates", "promotion_done", "holidays", "season"]].describe())
   ```
   #### Key Insights From Visuals:
-  #### Sales Trend Over Time
+  ### Sales Trend Over Time
   ![Sales Trend](Images/Sales_trend.png)
-  #### Sales Distribution
+  ### Sales Distribution
   ![Sales Distribution](Images/Sales_distribution.png)
   ### Promotion VS No-Promotion Sales
   ![Promotion Effects](Images/Promotion_effect.png)
