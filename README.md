@@ -50,13 +50,13 @@ import seaborn as sns
 # Load dataset
 df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 ```
-Find the complete [data cleaning and preprocessing code here](/scripts/data_cleaning_and_preprocessing.ipynb).
+***Find the complete [data cleaning and preprocessing code here](/scripts/data_cleaning_and_preprocessing.ipynb)***
 
 ### Data Analysis
-#### Exploratory Data Analysis (EDA)
+### Exploratory Data Analysis (EDA)
 **Objective:** Get to know the data, and check how promotions/holidays relate to sales 
 
-##### Key Steps Performed:
+#### Key Steps Performed:
 - Inspect summary statistics and first rows.
 - Visualize overall sales distribution (histogram / KDE).
 - Plot sales over time to reveal trends and seasonality.
@@ -67,12 +67,15 @@ Find the complete [data cleaning and preprocessing code here](/scripts/data_clea
   display(df.head())
   print(df[["sales_in_crates", "promotion_done", "holidays", "season"]].describe())
   ```
-  ##### Key Insights From Visuals:
-  *1. Sales Trend Over Time*
-
-  
+  #### Key Insights From Visuals:
+  #### Sales Trend Over Time
+  ![Sales Trend](Images/Sales_trend.png)
+  #### Sales Distribution
+  ![Sales Distribution](Images/Sales_distribution.png)
+  ### Promotion VS No-Promotion Sales
+  ![Promotion Effects](Images/Promotion_effect.png)
 
      
-  Find complete [exploratory data analysis code here](/scripts/EDA.ipynb)
+  ***Find the complete [exploratory data analysis code here](/scripts/EDA.ipynb)***
 
   
