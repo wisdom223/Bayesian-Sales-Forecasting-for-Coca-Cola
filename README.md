@@ -35,7 +35,7 @@ Steps Performed:
 
 #### Implementation in Python
 
-The following Python code demonstrates the data cleaning and preprocessing steps stated above:
+The following Python code snipet demonstrates the data cleaning and preprocessing steps stated above:
 
 ```python
 # importing all the necessary libraries for data preprocessing, analysis and visualization
@@ -49,33 +49,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score  #
 import seaborn as sns
 # Load dataset
 df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
-
-# Convert date column and extract month
-df['date'] = pd.to_datetime(df['date'])
-df['month'] = df['date'].dt.month
-
-# Encode cyclical features
-df['sin_month'] = np.sin(2 * np.pi * df['month'] / 12)
-df['cos_month'] = np.cos(2 * np.pi * df['month'] / 12)
-
-# Create seasonal indicator for peak months (April-August)
-df['season'] = df['month'].isin([4,5,6,7,8]).astype(int)
-
-# Select features and target variable
-features = ['promotion_done', 'holidays', 'season', 'sin_month', 'cos_month']
-X = df[features]
-y = df['sales_in_crates']
-
-# Split into training and test sets
-train_df = df.iloc[:-3]
-test_df = df.iloc[-3:]
-X_train = train_df[features]
-X_test = test_df[features]
-y_train = train_df['sales_in_crates']
-y_test = test_df['sales_in_crates']
-
-# Scale predictor variables
-scaler = StandardScaler()
-X_train_scaled = scaler.fit_transform(X_train)
-X_test_scaled = scaler.transform(X_test)
 ```
+
+Find the complete [data cleaning and preprocessing script here](/data_cleaning_and_preprocessing.ipynb).
+
