@@ -67,4 +67,4 @@ Objective: Get to know the data, and check how promotions/holidays relate to sal
   display(df.head())
   print(df[["sales_in_crates", "promotion_done", "holidays", "season"]].describe())
   ```
-  Find complete [exploratory data analysis code here](/EDA.ipynb) 
+  Find complete [exploratory data analysis code here](/scripts/EDA.ipynb) 
