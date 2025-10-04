@@ -85,8 +85,8 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 - Generate probabilistic forecasts, not just point predictions
 
 ### Traceplots
-![Traceplots]<p align="center"> <img src="Images/Trace_plot1.png"/> </p>
-![Traceplots]<p align="center"> <img src="Images/Trace_plot2.png"/> </p>
+<p align="center"> <img src="Images/Trace_plot1.png"/> </p>
+<p align="center"> <img src="Images/Trace_plot2.png"/> </p>
 #### Test Set Performance (summarized):
 - MAE: 20.12
 - RMSE: 24.72
