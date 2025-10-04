@@ -83,4 +83,16 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 - Estimate the magnitude of each factor’s effect on sales
 - Capture uncertainty in these estimates through posterior distributions
 - Generate probabilistic forecasts, not just point predictions
-<p align="center"> <img src="Images/Trace_plot1.png" width="350"/> <img src="Images/Trace_plot2.png" width="400"/> </p>
+
+### Traceplots
+![Traceplots]<p align="center"> <img src="Images/Trace_plot1.png"/> </p>
+![Traceplots]<p align="center"> <img src="Images/Trace_plot2.png"/> </p>
+#### Test Set Performance (summarized):
+- MAE: 20.12
+- RMSE: 24.72
+- R²: 0.83
+### Key Insights from the Model:
+- Promotions significantly increased sales
+- Holidays had a moderate but variable impact
+- Seasonal effects confirmed higher sales during April–August (rainy season)
+  ***Find the complete [MODELING code here](/scripts/EDA.ipynb)***
