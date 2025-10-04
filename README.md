@@ -95,4 +95,4 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 - Promotions significantly increased sales
 - Holidays had a moderate but variable impact
 - Seasonal effects confirmed higher sales during April–August (rainy season)
-  ***Find the complete [MODELING code here](/scripts/EDA.ipynb)***
+  ***Find the complete [MODELING code here](/scripts/Modeling_script.ipynb)***
