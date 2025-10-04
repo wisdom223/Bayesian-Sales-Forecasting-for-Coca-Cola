@@ -79,7 +79,7 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
   ***Find the complete [exploratory data analysis code here](/scripts/EDA.ipynb)***
 
 ## Modeling
-**Bayesian linear regression** model was used to quantify the impact of promotions, holidays, and seasonality on sales. While the EDA provided visual evidence of these relationships, the model allowed us to:
+**Bayesian linear regression** model was used to quantify the impact of promotions, holidays, and seasonality on sales. While the EDA provided visual evidence of these relationships, the model allowed to:
 - Estimate the magnitude of each factor’s effect on sales
 - Capture uncertainty in these estimates through posterior distributions
 - Generate probabilistic forecasts, not just point predictions
@@ -92,7 +92,9 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 - RMSE: 24.72
 - R²: 0.83
 ### Key Insights from the Model:
-- Promotions significantly increased sales
-- Holidays had a moderate but variable impact
-- Seasonal effects confirmed higher sales during April–August (rainy season)
+- Baseline sales: The outlet typically sells around 1,590 crates per month.
+- Promotions: Running a promotion increases sales by about 45 crates per month.
+- Holidays: Holidays have only a small and uncertain effect on sales.
+- Seasonality: During the rainy season (April–August), sales increase by about 35 crates per month.
+
   ***Find the complete [MODELING code here](/scripts/Modeling_script.ipynb)***
