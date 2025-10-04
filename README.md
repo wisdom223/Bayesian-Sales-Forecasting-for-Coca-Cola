@@ -78,4 +78,9 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
      
   ***Find the complete [exploratory data analysis code here](/scripts/EDA.ipynb)***
 
-  
+## Modeling
+**Bayesian linear regression** model was used to quantify the impact of promotions, holidays, and seasonality on sales. While the EDA provided visual evidence of these relationships, the model allowed us to:
+- Estimate the magnitude of each factor’s effect on sales
+- Capture uncertainty in these estimates through posterior distributions
+- Generate probabilistic forecasts, not just point predictions
+<p align="center"> <img src="images/traceplot_intercept.png" width="350"/> <img src="images/ppc_train.png" width="400"/> </p>
