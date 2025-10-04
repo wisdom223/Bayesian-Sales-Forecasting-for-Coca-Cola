@@ -83,4 +83,4 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 - Estimate the magnitude of each factor’s effect on sales
 - Capture uncertainty in these estimates through posterior distributions
 - Generate probabilistic forecasts, not just point predictions
-<p align="center"> <img src="images/Trace_plot1.png" width="350"/> <img src="images/Trace_plot2.png" width="400"/> </p>
+<p align="center"> <img src="Images/Trace_plot1.png" width="350"/> <img src="Images/Trace_plot2.png" width="400"/> </p>
