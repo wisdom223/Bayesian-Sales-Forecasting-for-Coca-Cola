@@ -87,14 +87,14 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 ### Traceplots
 <p align="center"> <img src="Images/Trace_plot1.png"/> </p>
 <p align="center"> <img src="Images/Trace_plot2.png"/> </p>
-#### Test Set Performance (summarized):
-- MAE: 20.12
-- RMSE: 24.72
-- R²: 0.83
+
 ### Key Insights from the Model:
 - Baseline sales: The outlet typically sells around 1,590 crates per month.
 - Promotions: Running a promotion increases sales by about 45 crates per month.
 - Holidays: Holidays have only a small and uncertain effect on sales.
 - Seasonality: During the rainy season (April–August), sales increase by about 35 crates per month.
+
+  #### Model Accuracy:
+- The model predicted sales quite well, with low error (MAE ≈ 20.12 crates, RMSE ≈ 24.72 crates) and a strong fit (R² ≈ 0.83).
 
   ***Find the complete [MODELING code here](/scripts/Modeling_script.ipynb)***
