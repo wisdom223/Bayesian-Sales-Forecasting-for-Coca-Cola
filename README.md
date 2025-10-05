@@ -151,5 +151,5 @@ This forecast provides a forward-looking guide for inventory planning and promot
 
 ***The entire project code (from data preprocessing to forecasting) is available here:***  
 
-[Full Project Code Notebook](/scripts/Full_Project_Code.ipynb)  
+[Full Project Code Notebook](/scripts/Full_project_code.ipynb)  
 
