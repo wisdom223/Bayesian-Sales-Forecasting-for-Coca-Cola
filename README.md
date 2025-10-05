@@ -147,4 +147,9 @@ This forecast provides a forward-looking guide for inventory planning and promot
 - 📅 **Forecasting insights**: Next year’s sales are projected to follow the same seasonal trend. Proactive planning in peak months will reduce stockouts and maximize revenue.  
 
 ---
+## 🖥️ Full Project Code  
+
+***The entire project code (from data preprocessing to forecasting) is available here:***  
+
+[Full Project Code Notebook](/scripts/Full_Project_Code.ipynb)  
 
