@@ -144,7 +144,7 @@ This forecast provides a forward-looking guide for inventory planning and promot
 - 🚀 **Promotions drive sales**: Outlets should increase the frequency of promotions, as each promo boosts sales by ~45 crates on average.  
 - 🌦 **Seasonality matters**: April–August consistently shows higher demand (+35 crates). Businesses should prepare for this peak season by stocking more inventory.  
 - 🎉 **Holiday effect is weak**: Holidays do not strongly affect sales, so resources may be better focused on promotions and seasonal demand rather than holiday campaigns.  
-- 📅 **Forecasting insights**: Next year’s sales are projected to follow the same seasonal trend. Proactive planning in peak months will reduce stockouts and maximize revenue.  
+- 📅 **Forecasting insights**: This year’s (2025) sales are projected to follow the same seasonal trend. Proactive planning in peak months will reduce stockouts and maximize revenue.  
 
 ---
 ## 🖥️ Full Project Code  
