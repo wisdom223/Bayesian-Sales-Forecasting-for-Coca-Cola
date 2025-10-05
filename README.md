@@ -1,4 +1,21 @@
+
 ## Bayesian Regression Analysis for Forecasting Coca-Cola Outlet Sales in Dekina, Nigeria
+## Table of Contents
+---
+- [Project Overview](#project-overview)  
+- [Data Sources](#data-sources)  
+- [Tools](#tools)  
+- [Data Cleaning/Preprocessing](#data-cleaningpreprocessing)  
+- [Data Analysis](#data-analysis)  
+   - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
+   - [Modeling](#modeling)  
+   - [Traceplots](#traceplots)  
+   - [Key Insights from the Model](#key-insights-from-the-model)  
+   - [Model Accuracy](#model-accuracy)  
+- [Forecasting](#forecasting)  
+- [Sales Forecast Plot](#sales-forecast-plot)  
+- [Key Insights from the Forecast Plot](#key-insights-from-the-forecast-plot)  
+- [Business Recommendations](#-business-recommendations)  
 
 ## Project Overview
 
@@ -103,7 +120,8 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 
 I extended the Bayesian regression model to generate a 12-month sales forecast. The model incorporates promotions, holidays, and seasonality, and produces both a median forecast and uncertainty intervals (90% CI) to reflect prediction confidence.
 
-[Sales Forecast Plot](/Images/Forecast_plot.png)
+### Sales Forecast Plot
+![Forecast_plot](/Images/Forecast_plot.png)
 
 ### Key Insights from the Forecast Plot:
 
@@ -118,3 +136,15 @@ I extended the Bayesian regression model to generate a 12-month sales forecast. 
 This forecast provides a forward-looking guide for inventory planning and promotional strategy.
 
 ***Find the complete [Forecasting code here](/scripts/Forecast_script.ipynb)***
+
+---
+
+## 📊 Business Recommendations  
+
+- 🚀 **Promotions drive sales**: Outlets should increase the frequency of promotions, as each promo boosts sales by ~45 crates on average.  
+- 🌦 **Seasonality matters**: April–August consistently shows higher demand (+35 crates). Businesses should prepare for this peak season by stocking more inventory.  
+- 🎉 **Holiday effect is weak**: Holidays do not strongly affect sales, so resources may be better focused on promotions and seasonal demand rather than holiday campaigns.  
+- 📅 **Forecasting insights**: Next year’s sales are projected to follow the same seasonal trend. Proactive planning in peak months will reduce stockouts and maximize revenue.  
+
+---
+
