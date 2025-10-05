@@ -98,3 +98,23 @@ df = pd.read_excel("Sales_data.xlsx", sheet_name="OutletA")
 - The model predicted sales quite well, with low error (MAE ≈ 20.12 crates, RMSE ≈ 24.72 crates) and a strong fit (R² ≈ 0.83).
 
   ***Find the complete [MODELING code here](/scripts/Modeling_script.ipynb)***
+
+## Forecasting
+
+I extended the Bayesian regression model to generate a 12-month sales forecast. The model incorporates promotions, holidays, and seasonality, and produces both a median forecast and uncertainty intervals (90% CI) to reflect prediction confidence.
+
+[Sales Forecast Plot](/Images/Forecast_plot.png)
+
+### Key Insights from the Forecast Plot:
+
+📉**February dip:** Sales are expected to drop slightly in February (~1550 crates).
+
+📈**Steady recovery:** From March to July, sales stabilize around ~1630 crates.
+
+🚀**Peak in August:** A sharp rise is predicted, reaching ~1700+ crates, driven by seasonality and promotions.
+
+⚖️**Stable outlook:** From September onward, sales level off around ~1630–1650 crates with relatively narrow uncertainty bands.
+
+This forecast provides a forward-looking guide for inventory planning and promotional strategy.
+
+***Find the complete [Forecasting code here](/scripts/Forecast_script.ipynb)***
